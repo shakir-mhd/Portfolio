@@ -7,4 +7,4 @@ Allow: /fonts/
 Allow: /llms.txt
 Allow: /llms-full.txt
 
-Sitemap: https://shakir-portfolio.vercel.app/sitemap.xml
+Sitemap: https://shakir-portfolio-web.vercel.app/sitemap.xml

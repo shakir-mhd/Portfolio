@@ -38,4 +38,4 @@
 - **LinkedIn:** https://www.linkedin.com/in/mohomed-shakir-852668278
 - **GitHub:** https://github.com/shakir-mhd
 - **Cal.com Meeting:** https://cal.com/mohomed-shakir
-- **Web Portfolio:** https://shakir-portfolio.vercel.app/
+- **Web Portfolio:** https://shakir-portfolio-web.vercel.app/
