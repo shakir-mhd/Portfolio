@@ -108,21 +108,11 @@ export default function FAQSection() {
               {/* Bottom CTA Row */}
               <div className="flex items-center gap-4 flex-wrap">
                 <a
-                  href={socialLinks.cal}
-                  target="_blank"
-                  rel="noreferrer"
+                  href={`mailto:${socialLinks.email}?subject=Discovery%20Call%20-%20Mohomed%20Shakir`}
                   className="font-ui inline-flex items-center gap-2 rounded-full bg-black text-white px-6 py-3 text-sm font-bold shadow-xl hover:bg-neutral-900 transition hover:scale-105 active:scale-95 cursor-pointer"
                 >
                   <Calendar className="w-4 h-4 text-white" />
-                  <span>Schedule Now</span>
-                </a>
-                <a
-                  href={socialLinks.cal}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="font-ui text-white/80 hover:text-white font-medium text-sm transition"
-                >
-                  Cal.com
+                  <span>Book a Call</span>
                 </a>
               </div>
             </div>
