@@ -110,13 +110,13 @@ export function Hero({
           </div>
 
           {/* Shakir's Custom 3D Avatar Head:
-              - Sized to clamp(340px, 33vw, 470px) matching Ruchit's massive central centerpiece presence
+              - Sized to clamp(260px, 33vw, 470px) matching Ruchit's massive central centerpiece presence
               - Positioned safely below the navbar with clearance, perfectly overlapping BUILD & SYSTEMS */}
           <div
             className="absolute left-1/2 top-[52%] -translate-x-1/2 -translate-y-[44%] z-[10] flex items-center justify-center pointer-events-auto select-none"
             style={{
-              width: 'clamp(340px, 33vw, 470px)',
-              height: 'clamp(340px, 33vw, 470px)',
+              width: 'clamp(260px, 33vw, 470px)',
+              height: 'clamp(260px, 33vw, 470px)',
             }}
           >
             <motion.div
@@ -144,10 +144,10 @@ export function Hero({
           </div>
         </div>
 
-        {/* Flanking Row: Aligned Exactly Beside Avatar at the Baseline of SYSTEMS (z-20) */}
-        <div className="hero-flanking-row flex flex-row items-end justify-between w-full max-w-[1380px] mx-auto mt-5 sm:mt-7 relative z-[20] gap-6">
+        {/* Flanking Row: Aligned Beside Avatar at Baseline of SYSTEMS on Desktop, Clean Centered on Mobile (z-20) */}
+        <div className="hero-flanking-row flex flex-col sm:flex-row items-center sm:items-end justify-between w-full max-w-[1380px] mx-auto mt-4 sm:mt-7 relative z-[20] gap-4 sm:gap-6 text-center sm:text-left">
           {/* Left: Bio narrative (Matching reference text styling, positioning & weight) */}
-          <div className="max-w-[320px] sm:max-w-[420px] text-left">
+          <div className="max-w-[320px] sm:max-w-[420px]">
             <p
               className="text-xs sm:text-[14.5px] leading-[1.5] text-[#b8b8b8] font-normal"
               style={{ fontFamily: "'Roboto', sans-serif" }}

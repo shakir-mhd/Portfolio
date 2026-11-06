@@ -301,7 +301,7 @@ export default function ServicesStack() {
     <section
       id="services"
       ref={containerRef}
-      className="relative min-h-[300vh] bg-[#07070a] border-t border-white/[0.08]"
+      className="relative min-h-auto lg:min-h-[300vh] bg-[#07070a] border-t border-white/[0.08]"
     >
       {/* Subtle background ambient red glow */}
       <div
@@ -310,7 +310,7 @@ export default function ServicesStack() {
       />
 
       {/* Pinned presentation viewport container - strictly exits when section ends */}
-      <div className="sticky top-20 lg:top-28 site-container min-h-[calc(100vh-6rem)] flex flex-col justify-center py-6">
+      <div className="relative lg:sticky top-0 lg:top-28 site-container min-h-auto lg:min-h-[calc(100vh-6rem)] flex flex-col justify-center py-12 lg:py-6">
         <div className="grid grid-cols-1 lg:grid-cols-[460px_minmax(0,1fr)] gap-10 lg:gap-14 items-center">
           {/* ========================================================= */}
           {/* LEFT COLUMN: Header, Copy & Exactly 16 Tools (2 Rows x 8) */}
@@ -328,13 +328,13 @@ export default function ServicesStack() {
               Creating resilient cloud backends, scalable architectures, and interactive modern web platforms engineered for peak performance and user delight.
             </p>
 
-            {/* Exactly 16 Tools in 2 Rows x 8 Columns matching Image 2 */}
+            {/* Exactly 16 Tools: 4x4 on mobile, 2x8 on desktop matching Image 2 */}
             <div className="pt-2">
               <p className="font-ui text-xs font-semibold text-neutral-400 tracking-wide uppercase mb-3">
                 Tools that I use
               </p>
 
-              <div className="grid grid-cols-8 gap-2 sm:gap-2.5 max-w-[460px]">
+              <div className="grid grid-cols-4 sm:grid-cols-8 gap-2 sm:gap-2.5 max-w-[460px]">
                 {ALL_TOOLS.map((tool) => (
                   <div
                     key={tool.name}

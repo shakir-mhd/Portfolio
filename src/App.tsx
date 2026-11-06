@@ -1,5 +1,6 @@
 import { lazy, Suspense, useEffect, useState, type ReactNode } from 'react';
 import { AnimatePresence, LayoutGroup, motion } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 import { type Project, type SectionId } from './data/portfolioData';
 import { SmoothScrollProvider, useSmoothScroll } from './hooks/smoothScroll';
 import CustomCursor from './components/CustomCursor';
@@ -129,6 +130,8 @@ function PortfolioApp() {
           )}
         </AnimatePresence>
       </Suspense>
+
+      <Analytics />
     </LayoutGroup>
   );
 }
