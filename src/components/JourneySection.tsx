@@ -5,7 +5,7 @@ import { SectionHeading } from './fx';
 
 export default function JourneySection() {
   return (
-    <section id="journey" className="relative py-20 lg:py-28 overflow-visible bg-ink">
+    <section id="journey" className="relative py-20 lg:py-28 overflow-visible bg-ink border-t border-white/[0.08]">
       {/* Cinematic Ambient Glow */}
       <div
         aria-hidden
@@ -102,16 +102,16 @@ function JourneySeasonCard({
 
       {/* Season Body Content */}
       <div className="relative z-10 border-b border-white/10 pb-6 mb-6">
-        <span className="font-display text-sm tracking-[0.3em] text-crimson block mb-1">
+        <span className="font-ui text-xs font-bold tracking-[0.2em] text-crimson block mb-1">
           {season.season}
         </span>
-        <h3 className="font-display text-3xl sm:text-4xl text-bone tracking-wide group-hover:text-white transition-colors">
+        <h3 className="font-space font-bold text-2xl sm:text-3xl text-bone tracking-tight group-hover:text-white transition-colors">
           {season.title}
         </h3>
-        <p className="text-sm font-medium text-mist mt-1">
+        <p className="font-body text-sm font-medium text-mist mt-1">
           {season.organization} &bull; <span className="text-bone/70">{season.location}</span>
         </p>
-        <p className="text-sm sm:text-base leading-relaxed text-bone/85 mt-4">
+        <p className="font-body text-sm sm:text-[15px] leading-relaxed text-neutral-300 mt-3">
           {season.description}
         </p>
       </div>

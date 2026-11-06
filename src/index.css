@@ -1,5 +1,29 @@
 @import 'tailwindcss';
 
+@font-face {
+  font-family: 'Microphone Check';
+  src: url('/fonts/MicrophoneCheck-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Microphone Check Regular';
+  src: url('/fonts/MicrophoneCheck-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk Bold';
+  src: url('/fonts/SpaceGrotesk-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --color-ink: #07070a;
   --color-ink-2: #0e0e14;
@@ -13,16 +37,22 @@
   --color-bg-light: rgb(250, 250, 250);
   --color-crimson: #ea0044;
   --color-crimson-2: #ff2a6d;
+  --color-crimson-hover: #ff2a6d;
   --color-accent-vivid: rgb(234, 0, 68);
   --color-cyan: #00f0ff;
   --color-bone: #f4f1ec;
   --color-mist: #a7a6ad;
   --color-smoke: #6d6c75;
   --font-main: 'Space Grotesk', sans-serif;
-  --font-display: 'Bebas Neue', 'Oswald', Impact, sans-serif;
-  --font-hero: 'Outfit', sans-serif;
+  --font-space: 'Space Grotesk', 'Space Grotesk Bold', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+  --font-ui: 'Inter', sans-serif;
+  --font-script: 'Microphone Check', 'Microphone Check Regular', cursive;
+  --font-mono: 'Fragment Mono', monospace;
+  --font-display: 'Space Grotesk Bold', 'Space Grotesk', sans-serif;
+  --font-hero: 'Space Grotesk Bold', 'Space Grotesk', sans-serif;
   --font-serif: 'Instrument Serif', Georgia, serif;
-  --font-sans: 'Space Grotesk', 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-sans: 'Roboto', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --ease-cine: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -36,10 +66,15 @@
   --color-crimson-glow: rgba(234, 0, 68, 0.35);
   --bg-dark: #07070a;
   --text-muted: #a7a6ad;
+  --border-subtle: rgba(130, 130, 130, 0.15);
+  --border-hairline: rgba(255, 255, 255, 0.08);
 
   --font-main: 'Space Grotesk', sans-serif;
-  --font-display: 'Bebas Neue', 'Oswald', Impact, sans-serif;
-  --font-hero: 'Outfit', sans-serif;
+  --font-space: 'Space Grotesk', 'Space Grotesk Bold', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+  --font-ui: 'Inter', sans-serif;
+  --font-script: 'Microphone Check', 'Microphone Check Regular', cursive;
+  --font-mono: 'Fragment Mono', monospace;
 
   --font-size-hero: clamp(72px, 12vw, 133px);
   --font-size-base: 16px;
@@ -66,11 +101,40 @@ body {
   margin: 0;
   background: var(--color-ink);
   color: var(--color-bone);
-  font-family: var(--font-sans);
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: clip;
   text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', 'Space Grotesk Bold', sans-serif;
+  letter-spacing: -0.025em;
+}
+
+button, input, select, textarea {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-space {
+  font-family: 'Space Grotesk', 'Space Grotesk Bold', sans-serif;
+}
+
+.font-script {
+  font-family: 'Microphone Check', 'Microphone Check Regular', cursive;
+}
+
+.font-body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.font-ui {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-mono-custom {
+  font-family: 'Fragment Mono', monospace;
 }
 
 ::selection {
@@ -122,12 +186,15 @@ body {
   display: none;
 }
 
-/* Custom cursor support */
+/* Custom cursor support: hide default OS pointer across the page */
 .has-custom-cursor,
-.has-custom-cursor a,
-.has-custom-cursor button,
-.has-custom-cursor [role='button'] {
-  cursor: none;
+.has-custom-cursor * {
+  cursor: none !important;
+}
+
+.has-custom-cursor input,
+.has-custom-cursor textarea {
+  cursor: text !important;
 }
 
 .glass {
@@ -204,9 +271,35 @@ body {
   to { background-position: 200% center; }
 }
 
+/* Marquee Animations */
+@keyframes marqueeLeft {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marqueeLeft 34s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes floatCharacter {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0.8deg);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .grain,
-  .shimmer-text {
+  .shimmer-text,
+  .animate-marquee {
     animation: none !important;
   }
 }

@@ -9,7 +9,7 @@ export default function Originals({ onOpen }: { onOpen: (p: Project) => void }) 
   const desktop = useDesktop();
   const reduced = useReducedMotionPref();
   return (
-    <section id="originals" className="relative">
+    <section id="originals" className="relative border-t border-white/[0.08]">
       {desktop && !reduced ? <PinnedOriginals onOpen={onOpen} /> : <RailOriginals onOpen={onOpen} />}
     </section>
   );
@@ -21,7 +21,7 @@ function Intro() {
       <p className="mb-3 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.32em] text-crimson-2">
         <span className="h-px w-8 bg-crimson" /> {featuredProjects.length} Selected Works &bull; Production Systems
       </p>
-      <RevealText as="h2" text="PROJECTS" className="font-display text-[clamp(3.5rem,8vw,7.5rem)] leading-[0.85] text-bone" />
+      <RevealText as="h2" text="PROJECTS" className="font-space font-bold text-[clamp(2.4rem,4.8vw,4.2rem)] leading-[0.95] tracking-[-0.035em] text-white" />
       <p className="mt-4 max-w-sm text-sm sm:text-base leading-relaxed text-mist">
         Real production platforms, institutional LMS systems, and spatial road mapping software. Click any title to inspect the full case study.
       </p>
@@ -42,7 +42,7 @@ function Outro() {
       <span className="flex h-16 w-16 items-center justify-center rounded-full border border-white/25 text-2xl text-bone transition group-hover:scale-110 group-hover:border-crimson group-hover:text-crimson">
         ↗
       </span>
-      <span className="font-display text-3xl tracking-wide text-bone">More on GitHub</span>
+      <span className="font-space font-bold text-2xl tracking-tight text-bone">More on GitHub</span>
       <span className="text-xs text-mist">github.com/shakir-mhd</span>
     </a>
   );

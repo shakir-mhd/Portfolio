@@ -1,0 +1,41 @@
+# Full Professional Dossier: Mohomed Shakir
+
+## Identity & Core Role
+- **Name:** Mohomed Shakir (also known as Shakir, Shakir Mohomed, M. Shakir)
+- **Role:** Cloud Engineer & Full-Stack Developer
+- **Location:** Colombo, Sri Lanka
+- **Availability:** Actively seeking Cloud Engineering internships, Full-Stack software engineering internships, junior developer roles, and freelance technical systems.
+
+## Academic & Vocational Credentials
+1. **SLTC Research University (2024 – Present):**
+   - Degree: BSc (Hons) in Cloud Computing
+   - Location: Padukka, Sri Lanka
+   - Highlights: Distributed networks, virtualization, AWS cloud computing labs, cloud infrastructure modeling.
+2. **Vocational Training Authority (VTA) (2025 – 2026):**
+   - Certification: NVQ Level 4 in Software Development
+   - Location: Padukka, Sri Lanka
+   - Highlights: Core software fundamentals, object-oriented programming with Java, relational database design with MySQL, desktop billing systems.
+3. **IEEE Student Branch:**
+   - Active student chapter participant in workshops, technical competitions, and community engineering initiatives.
+
+## Verified Production Engineering Experience
+1. **Mahapola Port & Maritime Academy (2026 – Present):**
+   - Title: Software Trainee (OJT)
+   - Scope: Institutional learning platform development, maritime trainee records databases in MySQL, academic grading workflows, and secure administrative controls.
+2. **Route Rescue LK — Lead Architect & Independent Engineer:**
+   - Spatial road incident reporting engine with dynamic Leaflet map markers, roadside emergency dispatch, and Vercel edge deployment.
+
+## Technical Skills Matrix
+- **Cloud Computing & Virtualization:** AWS (EC2, S3, VPC, IAM), Docker, Linux OS (Ubuntu, Debian, Shell automation), Serverless architectures, Vercel CI/CD.
+- **Frontend Development:** React 18, TypeScript, Tailwind CSS, Framer Motion, HTML5/CSS3, responsive micro-interactions.
+- **Backend & APIs:** Node.js, PHP (MVC Controllers), RESTful API design.
+- **Databases & Storage:** MySQL, PostgreSQL, Relational Schema Normalization, JDBC connectivity.
+- **GIS & Mapping:** Leaflet.js, OpenStreetMap, GeoJSON, real-time spatial marker rendering.
+- **Mobile & Desktop:** Android SDK, Java Swing GUI application development.
+
+## Contact & Direct Channels
+- **Email:** shakirmohomed8685@gmail.com
+- **LinkedIn:** https://www.linkedin.com/in/mohomed-shakir-852668278
+- **GitHub:** https://github.com/shakir-mhd
+- **Cal.com Meeting:** https://cal.com/mohomed-shakir
+- **Web Portfolio:** https://shakir-portfolio.vercel.app/

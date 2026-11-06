@@ -65,7 +65,9 @@ export const personalInfo = {
   },
   resumePdf: '/assets/Mohomed_Shakir_Resume.pdf',
   statusText: 'Open for Internships & Projects',
+  heroPreTitle: 'ARCHITECT & BUILD',
   heroMainWord: 'SYSTEMS',
+  heroSubtitle: 'I engineer resilient cloud infrastructure, scalable backends, and modern web applications that turn complex problems into clean, reliable software.',
   aboutHeadline: 'Architecting resilient cloud systems & modern full-stack applications.',
   aboutBio: [
     'I am an aspiring Cloud Engineer and Full-Stack Developer currently reading for my BSc (Hons) in Cloud Computing at SLTC Research University, backed by foundational software development training through my NVQ Level 4 certification from VTA Padukka.',
@@ -109,7 +111,7 @@ export const editorialQuote = {
   organization: 'SLTC Research University'
 };
 
-export const cyclingWords = ['deploy', 'engineer', 'scale', 'build'];
+export const cyclingWords = ['create', 'deploy', 'engineer', 'scale', 'build'];
 
 export const sectionMeta: Record<SectionId, { card: string; meta: string; palette: Palette }> = {
   hero: { card: 'OVERVIEW', meta: 'Systems & Engineering Overview', palette: { from: '#140308', via: '#590a1c', to: '#07070a', accent: '#ea0044' } },
@@ -472,19 +474,27 @@ export const introSlides = [
 
 export const faqsData = [
   {
+    q: 'How do we get started?',
+    a: 'We start with a quick discussion where you share your idea, infrastructure goals, and what you need. From there, I suggest the right cloud architecture or full-stack approach and next steps.'
+  },
+  {
     q: 'What is your primary area of technical specialization?',
-    a: 'My core focus is at the intersection of Cloud Computing and Full-Stack Web Development. I architect cloud infrastructure using AWS and Docker while building performant, responsive web applications in React, TypeScript, Node.js, and PHP.'
+    a: 'My core focus is at the intersection of Cloud Computing and Full-Stack Web Development. I architect cloud infrastructure using AWS, Docker, and Linux while building performant web applications in React, TypeScript, Node.js, and PHP.'
   },
   {
-    q: 'What kind of roles are you currently seeking?',
-    a: 'I am actively seeking software engineering internships, cloud infrastructure / DevOps trainee roles, and collaborative projects where I can apply my systems thinking and practical engineering skills.'
+    q: 'Can you work across both frontend and backend systems?',
+    a: 'Yes! My experience spans modern front-end engineering with React and TypeScript, backend REST API development in Node.js and PHP, relational database modeling in MySQL, and automated CI/CD deployments on Vercel and AWS.'
   },
   {
-    q: 'Can you work on both frontend and backend systems?',
-    a: 'Yes! My experience spans front-end engineering with React, TypeScript, and modern animations, backend API development in Node.js and PHP, relational database modeling in MySQL, and cloud infrastructure on AWS.'
+    q: 'How long does a typical project take to complete?',
+    a: 'Timelines vary by scope. Small to medium web applications or cloud setups typically take 1 to 3 weeks, while comprehensive enterprise architectures take 4 to 8 weeks with milestone reviews.'
   },
   {
-    q: 'What is Route Rescue LK?',
-    a: 'Route Rescue LK is a live production web application engineered to assist motorists across Sri Lanka by providing real-time road hazard reporting, interactive route mapping with Leaflet, and roadside mechanic dispatch.'
+    q: 'What kind of roles and contract work are you currently seeking?',
+    a: 'I am open to software engineering internships, cloud infrastructure / DevOps contracts, and independent full-stack consulting projects where I can build reliable, scalable software.'
+  },
+  {
+    q: 'Do you provide ongoing maintenance and deployment support?',
+    a: 'Yes. Every project includes architectural documentation, CI/CD pipeline automation, and handover support to ensure your cloud environments run reliably in production.'
   }
 ];

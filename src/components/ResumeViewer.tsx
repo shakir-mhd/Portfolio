@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { personalInfo, journeySeasons, featuredProjects } from '../data/portfolioData';
+import { personalInfo, featuredProjects } from '../data/portfolioData';
 import { EASE, Magnetic, SectionHeading } from './fx';
 import { downloadResumePdf } from '../utils/downloadResume';
 
 export default function ResumeViewer({ onView }: { onView: () => void }) {
   return (
-    <section id="screenplay" className="relative py-20 overflow-hidden">
+    <section id="screenplay" className="relative pt-24 pb-36 overflow-hidden border-t border-white/[0.08]">
       <SectionHeading kicker="Curriculum Vitae" title="Professional Background & Resume" />
 
-      <div className="site-container grid gap-10 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-14">
+      <div className="site-container grid gap-10 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-14 items-start">
         {/* Left: Designed Screenplay Sheet */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -25,7 +25,7 @@ export default function ResumeViewer({ onView }: { onView: () => void }) {
           <p className="font-serif text-3xl sm:text-4xl italic leading-tight text-bone">
             Qualifications, experience, and projects in one view.
           </p>
-          <p className="text-sm leading-relaxed text-mist">
+          <p className="font-body text-sm leading-relaxed text-mist">
             SLTC Cloud Computing degree track, NVQ Level 4 certification, institutional maritime OJT, and 4 production projects — view it here or take a copy with you.
           </p>
 
@@ -33,9 +33,8 @@ export default function ResumeViewer({ onView }: { onView: () => void }) {
             <Magnetic className="w-full">
               <button
                 type="button"
-                data-cursor="view"
                 onClick={onView}
-                className="flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-bone px-6 text-sm font-bold text-ink transition hover:bg-white"
+                className="font-ui flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-bone px-6 text-sm font-bold text-ink transition hover:bg-white cursor-pointer"
               >
                 <span>VIEW FULLSCREEN RESUME</span>
               </button>
@@ -46,7 +45,7 @@ export default function ResumeViewer({ onView }: { onView: () => void }) {
                 type="button"
                 onClick={downloadResumePdf}
                 data-cursor="link"
-                className="glass flex min-h-12 w-full items-center justify-center gap-2 rounded-xl px-6 text-sm font-semibold text-bone transition hover:bg-white/15 cursor-pointer active:scale-95"
+                className="font-ui glass flex min-h-12 w-full items-center justify-center gap-2 rounded-xl px-6 text-sm font-semibold text-bone transition hover:bg-white/15 cursor-pointer active:scale-95"
               >
                 <span>⤓ DOWNLOAD PDF RESUME</span>
               </button>
@@ -60,8 +59,8 @@ export default function ResumeViewer({ onView }: { onView: () => void }) {
               { v: String(featuredProjects.length), k: 'Projects' },
             ].map((s) => (
               <div key={s.k} className="bg-ink-2 p-4">
-                <dd className="font-display text-2xl text-bone">{s.v}</dd>
-                <dt className="mt-1 text-[9px] font-bold uppercase tracking-wider text-smoke">{s.k}</dt>
+                <dd className="font-space font-bold text-2xl text-bone">{s.v}</dd>
+                <dt className="font-ui mt-1 text-[9px] font-bold uppercase tracking-wider text-smoke">{s.k}</dt>
               </div>
             ))}
           </dl>
@@ -82,11 +81,11 @@ export function ResumeSheet() {
       {/* Header */}
       <header className="mb-8 flex flex-wrap items-end justify-between gap-4 border-b border-white/10 pb-6">
         <div>
-          <p className="text-[10px] font-bold tracking-[0.34em] text-smoke">STARRING</p>
-          <h3 className="mt-1 font-display text-3xl sm:text-5xl text-bone tracking-wide">
+          <p className="font-ui text-[10px] font-bold tracking-[0.34em] text-smoke">STARRING</p>
+          <h3 className="mt-1 font-space font-bold text-3xl sm:text-5xl text-bone tracking-tight">
             {personalInfo.fullName}
           </h3>
-          <p className="text-xs font-semibold uppercase tracking-widest text-crimson-2 mt-1">
+          <p className="font-ui text-xs font-semibold uppercase tracking-widest text-crimson-2 mt-1">
             {personalInfo.role}
           </p>
         </div>

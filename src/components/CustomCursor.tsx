@@ -1,14 +1,6 @@
 import { useEffect, useState } from 'react';
-import { AnimatePresence, motion, useMotionValue, useSpring } from 'framer-motion';
+import { motion, useMotionValue, useSpring } from 'framer-motion';
 import { useFinePointer, useReducedMotionPref } from '../hooks/useMedia';
-
-const LABELS: Record<string, string> = {
-  view: 'VIEW',
-  play: '▶',
-  link: '↗',
-  drag: '↔',
-  close: '✕',
-};
 
 export default function CustomCursor() {
   const fine = useFinePointer();
@@ -17,11 +9,11 @@ export default function CustomCursor() {
 
   const x = useMotionValue(-100);
   const y = useMotionValue(-100);
-  // High-performance snappy spring
-  const sx = useSpring(x, { stiffness: 700, damping: 42, mass: 0.25 });
-  const sy = useSpring(y, { stiffness: 700, damping: 42, mass: 0.25 });
-  const [mode, setMode] = useState<string | null>(null);
+  // Responsive spring with optimal responsiveness
+  const sx = useSpring(x, { stiffness: 650, damping: 48, mass: 0.6 });
+  const sy = useSpring(y, { stiffness: 650, damping: 48, mass: 0.6 });
   const [hoverLink, setHoverLink] = useState(false);
+  const [isOverCrimson, setIsOverCrimson] = useState(false);
   const [visible, setVisible] = useState(false);
   const [down, setDown] = useState(false);
 
@@ -35,9 +27,16 @@ export default function CustomCursor() {
       if (!visible) setVisible(true);
 
       const t = e.target as HTMLElement | null;
-      const tagged = t?.closest<HTMLElement>('[data-cursor]');
-      setMode(tagged?.dataset.cursor ?? null);
-      setHoverLink(!tagged && !!t?.closest('a, button, [role="button"], input, select, textarea, .interactive'));
+      const isInteractive = !!t?.closest(
+        'a, button, [role="button"], input, select, textarea, .interactive, .cursor-pointer, [data-cursor]'
+      );
+      setHoverLink(isInteractive);
+
+      // Detect if cursor is hovering over a crimson / red element for adaptive contrast
+      const crimsonEl = t?.closest(
+        '.bg-crimson, [class*="bg-[#ea0044]"], [class*="bg-crimson"], [style*="#ea0044"], [style*="rgb(234, 0, 68)"]'
+      );
+      setIsOverCrimson(!!crimsonEl);
     };
 
     const leave = () => setVisible(false);
@@ -63,17 +62,35 @@ export default function CustomCursor() {
 
   if (!enabled) return null;
 
-  const label = mode ? LABELS[mode] : null;
-  // Sleek, refined sizing:
-  // - Default resting: 13px (delicate glass bead)
-  // - Interactive link/button hover: 24px (subtle expansion, not oversized)
-  // - Action label (VIEW, PLAY): 64px (clean badge)
-  const size = label ? 64 : hoverLink ? 24 : 13;
+  // Refined proportional dimensions:
+  // - Interactive (hovering links, buttons, cards): 24px delicate translucent ring
+  // - Normal resting: 8px solid crimson precision dot with white rim
+  const size = hoverLink ? 26 : 8;
+
+  const bgColor = hoverLink
+    ? isOverCrimson
+      ? 'rgba(255, 255, 255, 0.15)'
+      : 'rgba(234, 0, 68, 0.12)'
+    : isOverCrimson
+    ? '#ffffff'
+    : '#ea0044';
+
+  const borderColor = isOverCrimson
+    ? 'rgba(0, 0, 0, 0.6)'
+    : hoverLink
+    ? 'rgba(255, 255, 255, 0.85)'
+    : 'rgba(255, 255, 255, 0.9)';
+
+  const boxShadow = isOverCrimson
+    ? '0 0 10px rgba(255, 255, 255, 0.9), 0 0 2px #ffffff'
+    : hoverLink
+    ? '0 0 14px rgba(234, 0, 68, 0.5), 0 0 2px rgba(255, 255, 255, 0.5)'
+    : '0 0 10px rgba(234, 0, 68, 0.9), 0 0 3px #ea0044';
 
   return (
     <motion.div
       aria-hidden
-      className="pointer-events-none fixed left-0 top-0 z-[200] flex items-center justify-center rounded-full will-change-transform"
+      className="pointer-events-none fixed left-0 top-0 z-[9999] flex items-center justify-center rounded-full will-change-transform"
       style={{
         x: sx,
         y: sy,
@@ -84,46 +101,12 @@ export default function CustomCursor() {
         width: size,
         height: size,
         opacity: visible ? 1 : 0,
-        scale: down ? 0.8 : 1,
-        // Liquid Glass styling: translucent refraction, specular border
-        background: label
-          ? 'linear-gradient(135deg, rgba(234, 0, 68, 0.7) 0%, rgba(122, 0, 34, 0.5) 100%)'
-          : hoverLink
-          ? 'rgba(234, 0, 68, 0.08)'
-          : 'rgba(255, 255, 255, 0.15)',
-        borderColor: label
-          ? 'rgba(255, 255, 255, 0.7)'
-          : hoverLink
-          ? 'rgba(255, 255, 255, 0.65)'
-          : 'rgba(255, 255, 255, 0.5)',
-        borderWidth: hoverLink || label ? '1.5px' : '1px',
-        boxShadow: label
-          ? '0 0 25px rgba(234, 0, 68, 0.55), inset 0 1px 2px rgba(255, 255, 255, 0.6)'
-          : hoverLink
-          ? '0 0 12px rgba(234, 0, 68, 0.35), inset 0 1px 1.5px rgba(255, 255, 255, 0.6)'
-          : '0 0 8px rgba(234, 0, 68, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.8)',
+        scale: down ? 0.75 : 1,
+        backgroundColor: bgColor,
+        border: `1.5px solid ${borderColor}`,
+        boxShadow: boxShadow,
       }}
-      transition={{ type: 'spring', stiffness: 500, damping: 32 }}
-    >
-      {/* Tiny liquid lens center dot when resting */}
-      {!label && !hoverLink && (
-        <span className="h-1 w-1 rounded-full bg-crimson shadow-[0_0_4px_rgba(234,0,68,0.9)]" />
-      )}
-
-      {/* Mode Label (VIEW, PLAY, LINK) */}
-      <AnimatePresence>
-        {label && (
-          <motion.span
-            key={label}
-            initial={{ opacity: 0, scale: 0.6 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.6 }}
-            className="font-sans text-[11px] font-bold tracking-[0.16em] text-white drop-shadow-sm select-none"
-          >
-            {label}
-          </motion.span>
-        )}
-      </AnimatePresence>
-    </motion.div>
+      transition={{ type: 'spring', stiffness: 650, damping: 42 }}
+    />
   );
 }

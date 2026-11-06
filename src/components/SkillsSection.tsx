@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { skillCategories, skillEvidence, type SkillCategory } from '../data/portfolioData';
 import { EASE, SectionHeading } from './fx';
@@ -13,7 +13,7 @@ export default function SkillsSection() {
   const hue = HUES[cat % HUES.length];
 
   return (
-    <section id="skills" className="relative py-20 overflow-hidden">
+    <section id="skills" className="relative pt-24 pb-36 overflow-hidden border-t border-white/[0.08]">
       <SectionHeading
         kicker="Technology Universe"
         title="Skills & Evidence"
@@ -24,7 +24,7 @@ export default function SkillsSection() {
         }
       />
 
-      <div className="site-container grid gap-8 lg:grid-cols-[280px_minmax(0,1fr)] lg:gap-14">
+      <div className="site-container grid gap-8 lg:grid-cols-[280px_minmax(0,1fr)] lg:gap-14 items-start">
         {/* Category List */}
         <div
           className="rail -mx-[var(--gutter)] flex gap-2 overflow-x-auto px-[var(--gutter)] lg:mx-0 lg:flex-col lg:gap-1.5 lg:overflow-visible lg:px-0"
@@ -38,7 +38,7 @@ export default function SkillsSection() {
               role="tab"
               aria-selected={i === cat}
               onClick={() => setCat(i)}
-              className={`group relative shrink-0 rounded-xl px-4 py-3 text-left transition lg:px-5 ${
+              className={`group relative shrink-0 rounded-xl px-4 py-3 text-left transition lg:px-5 cursor-pointer ${
                 i === cat ? 'text-bone' : 'text-smoke hover:text-bone'
               }`}
             >
@@ -56,7 +56,7 @@ export default function SkillsSection() {
                   style={{ background: hue }}
                 />
               )}
-              <span className="relative block font-display text-2xl tracking-wide lg:text-3xl">{c.title}</span>
+              <span className="relative block font-space font-bold text-2xl tracking-tight lg:text-3xl">{c.title}</span>
               <span className="relative hidden text-xs text-smoke lg:block mt-0.5">
                 {c.skills.length} skills &bull; {c.subtitle}
               </span>
@@ -83,7 +83,7 @@ export default function SkillsSection() {
                 <span>{category.subtitle}</span>
               </motion.p>
 
-              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-3">
+              <div className="grid grid-cols-2 gap-3.5 sm:grid-cols-3 xl:grid-cols-3">
                 {category.skills.map((s) => (
                   <SkillCard key={s.name} skill={s} hue={hue} />
                 ))}

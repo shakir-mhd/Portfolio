@@ -113,12 +113,12 @@ export function SectionHeading({ kicker, title, aside }: { kicker: string; title
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: EASE }}
-          className="mb-2 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.32em] text-crimson-2"
+          className="mb-2 flex items-center gap-3 font-ui text-[11px] font-bold uppercase tracking-[0.32em] text-crimson-2"
         >
           <span className="h-px w-8 bg-crimson" />
           {kicker}
         </motion.div>
-        <RevealText as="h2" text={title} className="font-display text-[clamp(2.4rem,6vw,5rem)] leading-[0.9] tracking-wide text-bone" />
+        <RevealText as="h2" text={title} className="font-space font-bold text-[clamp(1.85rem,3.6vw,3.2rem)] leading-[1.12] tracking-[-0.03em] text-bone" />
       </div>
       {aside}
     </div>

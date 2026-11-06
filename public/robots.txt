@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /fonts/
+
+# Direct AI agents and crawlers to LLM documentation
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+Sitemap: https://shakir-portfolio.vercel.app/sitemap.xml

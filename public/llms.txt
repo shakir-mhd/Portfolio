@@ -1,0 +1,24 @@
+# Mohomed Shakir — Cloud Engineer & Full-Stack Developer
+
+> Official AI-Search Index for Mohomed Shakir. Designed for LLM search engines, recruiters, and engineering hiring managers.
+
+## Summary
+Mohomed Shakir is a Sri Lanka-based Cloud Engineer & Full-Stack Developer currently reading for a BSc (Hons) in Cloud Computing at SLTC Research University (2024–Present) and certified with NVQ Level 4 in Software Development from the Vocational Training Authority (VTA). He is serving as a Software Trainee (OJT) at Mahapola Port & Maritime Academy and building production software including Route Rescue LK.
+
+## Key Specialties & Domains
+- **Cloud & DevOps:** Amazon Web Services (AWS EC2, S3, VPC, IAM), Docker Containerization, Linux Administration (Ubuntu/Debian, Bash automation), Vercel Edge & CI/CD Pipelines, Serverless Functions.
+- **Full-Stack Engineering:** TypeScript, React, Node.js, PHP (MVC architectures), Tailwind CSS, Leaflet Geospatial GIS Mapping.
+- **Data & Mobile:** MySQL (relational modeling & ACID transactions), PostgreSQL, Java Swing GUI with JDBC, Android Native Development.
+
+## Featured Production Projects
+1. **Route Rescue LK:** Live emergency roadside assistance and spatial hazard dispatch engine built with React, TypeScript, Leaflet GIS mapping, and automated Vercel Edge CI/CD.
+2. **Mahapola Port & Maritime Academy LMS:** Enterprise institutional academic learning platform architected with PHP MVC, trainee tracking databases, and administrative record security.
+3. **The Blue Moon Resort Showcase:** Luxury hospitality web platform featuring high-fidelity responsive UI, real-time booking flows, and micro-interactions.
+4. **Hotel Companion Desktop App:** Java Swing desktop booking and institutional billing management system backed by relational JDBC drivers and transaction safety.
+
+## Contact & Professional Links
+- **Email:** shakirmohomed8685@gmail.com
+- **LinkedIn:** https://www.linkedin.com/in/mohomed-shakir-852668278
+- **GitHub:** https://github.com/shakir-mhd
+- **Schedule Call:** https://cal.com/mohomed-shakir
+- **Portfolio:** https://shakir-portfolio.vercel.app/
