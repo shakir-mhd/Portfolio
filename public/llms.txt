@@ -18,6 +18,6 @@ Mohomed Shakir is a Sri Lanka-based Cloud Engineer & Full-Stack Developer curren
 
 ## Contact & Professional Links
 - **Email:** shakirmohomed8685@gmail.com
-- **LinkedIn:** https://www.linkedin.com/in/mohomed-shakir-852668278
+- **LinkedIn:** https://www.linkedin.com/in/shakir-mohomed-9912ab27b
 - **GitHub:** https://github.com/shakir-mhd
 - **Portfolio:** https://shakir-portfolio-web.vercel.app/
