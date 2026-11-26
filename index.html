@@ -39,9 +39,11 @@
     <meta name="twitter:image" content="https://shakir-portfolio-web.vercel.app/assets/shakir-portrait.png" />
     <meta name="twitter:creator" content="@_shakir_skr_" />
 
-    <!-- Icons & Manifest -->
+    <!-- Icons, Manifest & AI Discovery -->
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="alternate" type="text/plain" title="LLMs Summary" href="https://shakir-portfolio-web.vercel.app/llms.txt" />
+    <link rel="alternate" type="text/plain" title="LLMs Full Dossier" href="https://shakir-portfolio-web.vercel.app/llms-full.txt" />
 
     <!-- Preconnect & Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -113,7 +115,9 @@
           "@id": "https://shakir-portfolio-web.vercel.app/#website",
           "url": "https://shakir-portfolio-web.vercel.app/",
           "name": "Shakir Portfolio — Mohomed Shakir Official Website",
+          "alternateName": ["Shakir Portfolio", "Mohomed Shakir Portfolio"],
           "description": "Official engineering portfolio of Mohomed Shakir showcasing cloud architectures, verified projects, professional background, and contact information.",
+          "inLanguage": "en",
           "author": { "@id": "https://shakir-portfolio-web.vercel.app/#person" }
         },
         {
@@ -121,43 +125,93 @@
           "@id": "https://shakir-portfolio-web.vercel.app/#webpage",
           "url": "https://shakir-portfolio-web.vercel.app/",
           "name": "Shakir Portfolio — Mohomed Shakir",
+          "datePublished": "2026-11-01",
+          "dateModified": "2026-11-26",
+          "inLanguage": "en",
           "isPartOf": { "@id": "https://shakir-portfolio-web.vercel.app/#website" },
           "about": { "@id": "https://shakir-portfolio-web.vercel.app/#person" },
           "mainEntity": { "@id": "https://shakir-portfolio-web.vercel.app/#person" }
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://shakir-portfolio-web.vercel.app/#projects",
+          "name": "Featured Engineering Projects by Mohomed Shakir",
+          "itemListElement": [
+            {
+              "@type": "CreativeWork",
+              "position": 1,
+              "name": "Route Rescue LK",
+              "description": "Live emergency roadside assistance and spatial hazard incident reporting platform built with PHP, MySQL, AJAX, and Leaflet.js GIS mapping.",
+              "url": "https://github.com/shakir-mhd/RouteRescue-LK",
+              "author": { "@id": "https://shakir-portfolio-web.vercel.app/#person" }
+            },
+            {
+              "@type": "CreativeWork",
+              "position": 2,
+              "name": "Mahapola Port & Maritime Academy LMS",
+              "description": "Institutional maritime learning management platform and trainee records database architected with PHP MVC and MySQL.",
+              "author": { "@id": "https://shakir-portfolio-web.vercel.app/#person" }
+            },
+            {
+              "@type": "CreativeWork",
+              "position": 3,
+              "name": "Hotel The Blue Moon",
+              "description": "Synchronized hospitality web platform and native Android companion app built with WordPress, Elementor, and Java.",
+              "url": "https://github.com/shakir-mhd/Hotel-The-Blue-Moon-Web",
+              "author": { "@id": "https://shakir-portfolio-web.vercel.app/#person" }
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://shakir-portfolio-web.vercel.app/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Who is Mohomed Shakir?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Mohomed Shakir is a Cloud Engineer and Full-Stack Developer based in Sri Lanka, reading for a BSc (Hons) in Cloud Computing at SLTC Research University, certified with NVQ Level 4 in Software Development (VTA), and serving as a Software Trainee (OJT) at Mahapola Port & Maritime Academy."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What technologies does Mohomed Shakir specialize in?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Mohomed Shakir specializes in AWS Cloud (EC2, S3, VPC, IAM), Docker, Linux, Vercel CI/CD, React, TypeScript, Node.js, PHP MVC, MySQL, PostgreSQL, Leaflet.js GIS mapping, and Android development."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How can I contact or hire Mohomed Shakir?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can contact Mohomed Shakir directly via email at shakirmohomed8685@gmail.com, on LinkedIn (linkedin.com/in/shakir-mohomed-9912ab27b), or through GitHub (github.com/shakir-mhd)."
+              }
+            }
+          ]
         }
       ]
     }
     </script>
   </head>
   <body>
-    <!-- Search Engine Indexable Fallback & Application Mount -->
-    <div id="root">
-      <div style="position:absolute;left:-9999px;top:-9999px;opacity:0;pointer-events:none;" aria-hidden="true">
-        <h1>Shakir Portfolio — Mohomed Shakir Official Portfolio</h1>
-        <p>Mohomed Shakir is a Cloud Engineer and Full-Stack Developer based in Colombo, Sri Lanka. Reading BSc (Hons) in Cloud Computing at SLTC Research University and certified with NVQ Level 4 in Software Development from the Vocational Training Authority (VTA). Currently serving as a Software Trainee at Mahapola Port &amp; Maritime Academy.</p>
-        <h2>Technical Core &amp; Proven Skills</h2>
-        <p>AWS Cloud (EC2, S3, VPC, IAM), Docker Containerization, Linux OS, Vercel CI/CD, Serverless, React, TypeScript, Node.js, PHP MVC, MySQL, PostgreSQL, Leaflet Geospatial GIS, Android SDK.</p>
-        <h2>Featured Production Systems</h2>
-        <article>
-          <h3>Route Rescue LK</h3>
-          <p>Live emergency roadside assistance and spatial hazard incident reporting engine built with React, TypeScript, Leaflet GIS mapping, and automated Vercel Edge CI/CD.</p>
-        </article>
-        <article>
-          <h3>Mahapola Port &amp; Maritime Academy LMS</h3>
-          <p>Institutional maritime learning management platform and trainee records database built with PHP MVC and MySQL relational schema.</p>
-        </article>
-        <article>
-          <h3>Hotel The Blue Moon Resort Showcase</h3>
-          <p>High-performance luxury hospitality web platform featuring responsive booking workflows and micro-interactions.</p>
-        </article>
-        <h2>Contact Shakir</h2>
-        <p>Email: shakirmohomed8685@gmail.com | LinkedIn: https://www.linkedin.com/in/shakir-mohomed-9912ab27b | GitHub: https://github.com/shakir-mhd | Website: https://shakir-portfolio-web.vercel.app/</p>
-      </div>
-    </div>
+    <div id="root"></div>
     <noscript>
-      <h1>Shakir Portfolio — Mohomed Shakir</h1>
-      <p>Reading BSc (Hons) in Cloud Computing at SLTC Research University. Specialized in AWS Cloud, Docker, Linux, React, TypeScript, and distributed systems architecture.</p>
-      <p>Contact: shakirmohomed8685@gmail.com | LinkedIn: https://www.linkedin.com/in/shakir-mohomed-9912ab27b | GitHub: https://github.com/shakir-mhd</p>
+      <main>
+        <h1>Shakir Portfolio — Mohomed Shakir | Cloud Engineer &amp; Full-Stack Developer</h1>
+        <p>Official portfolio of Mohomed Shakir. Reading BSc (Hons) in Cloud Computing at SLTC Research University and certified with NVQ Level 4 in Software Development (VTA). Currently Software Trainee (OJT) at Mahapola Port &amp; Maritime Academy.</p>
+        <h2>Core Skills</h2>
+        <p>AWS Cloud (EC2, S3, VPC, IAM), Docker, Linux, Vercel CI/CD, React, TypeScript, Node.js, PHP MVC, MySQL, PostgreSQL, Leaflet.js GIS, Android SDK.</p>
+        <h2>Featured Projects</h2>
+        <ul>
+          <li>Route Rescue LK — Emergency roadside assistance and spatial hazard mapping platform.</li>
+          <li>Mahapola Port &amp; Maritime Academy LMS — Institutional learning management and trainee records system.</li>
+          <li>Hotel The Blue Moon — Hospitality web platform and Android companion app.</li>
+        </ul>
+        <p>Contact: shakirmohomed8685@gmail.com | <a href="https://www.linkedin.com/in/shakir-mohomed-9912ab27b">LinkedIn</a> | <a href="https://github.com/shakir-mhd">GitHub</a></p>
+      </main>
     </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>

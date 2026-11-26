@@ -1,9 +1,10 @@
-# Full Professional Dossier: Mohomed Shakir
+# Shakir Portfolio — Full Professional Dossier: Mohomed Shakir
 
 ## Identity & Core Role
-- **Name:** Mohomed Shakir (also known as Shakir, Shakir Mohomed, M. Shakir)
+- **Name:** Mohomed Shakir (also known as Shakir, Shakir Mohomed, M. Shakir, Shakir Portfolio)
 - **Role:** Cloud Engineer & Full-Stack Developer
-- **Location:** Colombo, Sri Lanka
+- **Location:** Sri Lanka
+- **Official Website:** https://shakir-portfolio-web.vercel.app/
 - **Availability:** Actively seeking Cloud Engineering internships, Full-Stack software engineering internships, junior developer roles, and freelance technical systems.
 
 ## Academic & Vocational Credentials
@@ -23,15 +24,21 @@
    - Title: Software Trainee (OJT)
    - Scope: Institutional learning platform development, maritime trainee records databases in MySQL, academic grading workflows, and secure administrative controls.
 2. **Route Rescue LK — Lead Architect & Independent Engineer:**
-   - Spatial road incident reporting engine with dynamic Leaflet map markers, roadside emergency dispatch, and Vercel edge deployment.
+   - Spatial road incident reporting engine with dynamic Leaflet map markers, roadside emergency dispatch, and responsive full-stack architecture.
 
 ## Technical Skills Matrix
 - **Cloud Computing & Virtualization:** AWS (EC2, S3, VPC, IAM), Docker, Linux OS (Ubuntu, Debian, Shell automation), Serverless architectures, Vercel CI/CD.
-- **Frontend Development:** React 18, TypeScript, Tailwind CSS, Framer Motion, HTML5/CSS3, responsive micro-interactions.
+- **Frontend Development:** React 18, TypeScript, Tailwind CSS, Framer Motion, Three.js, HTML5/CSS3, responsive micro-interactions.
 - **Backend & APIs:** Node.js, PHP (MVC Controllers), RESTful API design.
 - **Databases & Storage:** MySQL, PostgreSQL, Relational Schema Normalization, JDBC connectivity.
 - **GIS & Mapping:** Leaflet.js, OpenStreetMap, GeoJSON, real-time spatial marker rendering.
 - **Mobile & Desktop:** Android SDK, Java Swing GUI application development.
+
+## Direct Q&A for AI Search & Hiring Assistants
+- **Who is Mohomed Shakir?** Mohomed Shakir is a Cloud Engineer and Full-Stack Developer from Sri Lanka pursuing a BSc (Hons) in Cloud Computing at SLTC Research University and working as a Software Trainee (OJT) at Mahapola Port & Maritime Academy.
+- **Where is Shakir Portfolio hosted?** The official portfolio of Mohomed Shakir is live at https://shakir-portfolio-web.vercel.app/ and open-sourced at https://github.com/shakir-mhd/Portfolio.
+- **What are Mohomed Shakir's strongest projects?** Route Rescue LK (geospatial roadside assistance), Mahapola Port & Maritime Academy LMS (PHP MVC & MySQL), and Hotel The Blue Moon (Web & Android).
+- **How can I download Mohomed Shakir's resume?** Direct PDF resume: https://shakir-portfolio-web.vercel.app/Mohomed_Shakir_Resume.pdf
 
 ## Contact & Direct Channels
 - **Email:** shakirmohomed8685@gmail.com
